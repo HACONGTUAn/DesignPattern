@@ -1,0 +1,28 @@
+# Thư mục tạm thời và build
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
+
+# File log và cache
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.log
+*.meta
+
+# Thư mục cache và generated
+/UserSettings/
+/ProjectSettings/ProjectVersion.txt
+
+# Các file khác
+.DS_Store
