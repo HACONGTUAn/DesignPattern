@@ -21,7 +21,7 @@ Assets/AssetStoreTools*
 *.meta
 
 # Thư mục cache và generated
-/UserSettings/
+UserSettings/
 /ProjectSettings/ProjectVersion.txt
 
 # Các file khác
