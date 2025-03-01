@@ -6,9 +6,10 @@ public class MoveUpCommand : ICommand
 {
     Transform _transformPlayer;
     float _speed = 20f;
-    public MoveUpCommand(Transform transformPlayer)
+    public MoveUpCommand(Transform transformPlayer,float speed)
     {
         _transformPlayer = transformPlayer;
+        _speed = speed;
     }
     public void Execute()
     {

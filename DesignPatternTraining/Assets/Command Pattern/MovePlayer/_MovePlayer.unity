@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerCommand: {fileID: 1246525368}
+  speed: 2
 --- !u!65 &74095080
 BoxCollider:
   m_ObjectHideFlags: 0

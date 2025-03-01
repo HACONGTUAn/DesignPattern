@@ -6,27 +6,30 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     public ControllerCommand controllerCommand;
+    public float speed;
     void Start()
     {
-        controllerCommand.SetMoveLeftCommand(new MoveLeftCommand(this.transform));
-        controllerCommand.SetMoveRightCommand(new MoveRightCommand(this.transform));
-        controllerCommand.SetJumpCommand(new MoveUpCommand(this.transform));
+        controllerCommand.SetMoveLeftCommand(new MoveLeftCommand(this.transform,speed));
+        controllerCommand.SetMoveRightCommand(new MoveRightCommand(this.transform,speed));
+        controllerCommand.SetJumpCommand(new MoveUpCommand(this.transform,speed));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.X))
         {
-            controllerCommand?.MoveLeft();
+            controllerCommand.MoveLeft();
         }
-        if (Input.GetKeyDown(KeyCode.D))
+
+        if (Input.GetKey(KeyCode.V))
         {
-            controllerCommand?.MoveRight();
+            controllerCommand.MoveRight();
         }
-        if (Input.GetKeyDown(KeyCode.W))
+
+        if (Input.GetKey(KeyCode.C))
         {
-            controllerCommand?.Jump();
+            controllerCommand.Jump();
         }
     }
 }
