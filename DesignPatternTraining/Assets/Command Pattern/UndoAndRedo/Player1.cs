@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using undoAndRedo;
 using UnityEngine;
 
-namespace MovePlayerCommandPattern
+namespace undoAndRedo
 {
     public class Player : MonoBehaviour
     {
         // Start is called before the first frame update
-      
-         public HistoryManager historyManager;
+     
+        public HistoryManager historyManager;
 
         public float speed;
 
@@ -20,24 +19,27 @@ namespace MovePlayerCommandPattern
         {
             if (Input.GetKey(KeyCode.X))
             {
-                historyManager.ExecuteCommand(new undoAndRedo.MoveLeftCommand(this.transform,speed));
+                historyManager.ExecuteCommand(new MoveLeftCommand(this.transform, speed)); // Tạo mới instance Command
             }
 
             if (Input.GetKey(KeyCode.V))
             {
-                historyManager.ExecuteCommand(new undoAndRedo.MoveRightCommand(this.transform,speed));
+                historyManager.ExecuteCommand(new MoveRightCommand(this.transform, speed)); // Tạo mới instance Command
             }
 
             if (Input.GetKey(KeyCode.C))
             {
-                historyManager.ExecuteCommand(new undoAndRedo.MoveUpCommand(this.transform,speed));
+                historyManager.ExecuteCommand(new MoveUpCommand(this.transform, speed)); // Tạo mới instance Command
             }
 
-            if (Input.GetKey(KeyCode.B))
+            if (Input.GetKey(KeyCode.Z))
             {
                 historyManager.Undo();
             }
-           
+            if (Input.GetKey(KeyCode.B))
+            {
+                historyManager.Redo();
+            }
         }
     }
 }

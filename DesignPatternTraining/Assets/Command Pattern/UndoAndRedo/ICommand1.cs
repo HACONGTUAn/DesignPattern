@@ -1,8 +1,9 @@
-namespace MovePlayerCommandPattern
+namespace undoAndRedo
 {
     public interface ICommand
     {
         void Execute();
- 
+        void Undo();   
     }
+    
 }

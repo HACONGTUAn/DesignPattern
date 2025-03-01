@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MovePlayerCommandPattern
+namespace undo
 {
-    public class MoveUpCommand : ICommand
+    public class MoveLeftCommand : ICommand
     {
         Transform _transformPlayer;
         private Vector3 _previousPosition;
-        float _speed = 20f;
+        float _speed = 2f;
 
-        public MoveUpCommand(Transform transformPlayer, float speed)
+        public MoveLeftCommand(Transform transformPlayer, float speed)
         {
             _transformPlayer = transformPlayer;
             _speed = speed;
@@ -18,9 +18,8 @@ namespace MovePlayerCommandPattern
 
         public void Execute()
         {
-            // move Up player
             _previousPosition = _transformPlayer.position;
-            _transformPlayer.position += Vector3.up * _speed * Time.deltaTime;
+            _transformPlayer.position += Vector3.left * _speed * Time.deltaTime;
         }
 
         public void Undo()

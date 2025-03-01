@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MovePlayerCommandPattern
+namespace undo
 {
     public class MoveUpCommand : ICommand
     {
