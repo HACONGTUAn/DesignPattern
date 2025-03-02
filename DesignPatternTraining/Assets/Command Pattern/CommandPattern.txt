@@ -1,0 +1,112 @@
+command Design pattern 
+1. Mẫu này thuộc vào loại mẫu design pattern nào ?
+command (được gọi là Action , transaction) là thuộc nhóm hành vi 
+trung mâm với ObServer Design pattern 
+
+2. ứng dụng của mẫu là gì ? giải quyết các vấn đề thực tế gì ?
+
+Command cho phép chuyển đổi yêu cầu(request) thành một đối tượng độc lập
+chứa tất cả thông tin của request
+(tại sao cần điều này ? yêu cầu là gì nó khác gì với 1 đối tượng ?)
+
+*yêu cầu : 1 hành động hoặc một thao tác mà người dùng hoặc hệ thống muốn thực hiện 
+bất kỳ hành động nào , từ đơn giản đến phức tạp
+
+
+Command Object là gì ?
+
+được ra đời khi tất cả các nút của app đều nằm ở cùng 1 class
+(câu hỏi việc tất cả các nút được kéo thả xong cho vào addListener thì có gì khác nhỉ)
+
+3. điểm yếu và mạnh của mẫu so với cách giải quyết thông thường là gì ?
+mạnh :
+đảm bảo nguyên tắc Open/closed
+có thể thực hiện hoàn tác
+giảm liên kết phụ thuộc
+cho phép đóng gói các yêu cầu thành đồi tượng , dễ dàng chuyển dữ liệu giữa các thành phần 
+hệ thống
+đảm bảo nguyên tắc Single Responsibility (nguyên tắc này là gì vậy ? phát biểu của nó như nào 
+nó có tác dụng gì)
+
+4. cài đặt mẫu như nào ?
+tạo ra interface hành động cần thực hiện : Icommand
+triển khai interface thực hiện hành động : vd : MoveLeftIcommand ,MoveRightIcommnd
+nếu cần thêm ControllCommand để tách biệt hoàn toàn
+lớp thực thi Để gọi các hành động
+
+5. điểm gì khó hiểu khi cài đặt mẫu này ?
+
+6. trường hợp sử dụng nó là khi nào ?
+khi cần tham số hóa các đối tượng theo một hành động thực hiện 
+khi cần tạo và thực thi các kiêu cầu vào các thời điểm khác nhau
+khi cần hỗ trợ tính năn undo , log , callback
+phối hợp nhiều command với nhau theo thứ tự 
+7. nó tối ưu về mặt nào của chương trình ?
+
+8. tài liệu cần thiết để đạt được mẫu này là gì ?
+
+bài blog trên Viblo
+Chat Gpt/ genemi
+
+Nguyên tắc open / closed là 
+khi class được mở rộng thì có thể thêm vào và không ảnh hưởng đến các thứ đã có
+Class nên được thiết kế sao cho có thể mở rộng chức năng mà không cần sửa đổi mã nguồn hiện có
+
+Tuyệt vời! Thực hành là cách tốt nhất để nắm vững Command Design Pattern. Dưới đây là một số bài tập thực hành từ cơ bản đến phức tạp, được thiết kế để bạn áp dụng trong Unity với C#:
+
+Bài tập cơ bản:
+
+1. Điều khiển đối tượng đơn giản:
+
+Mô tả: Tạo một script cho phép di chuyển một GameObject (ví dụ: một khối lập phương) theo các hướng khác nhau (trái, phải, lên, xuống) bằng cách sử dụng Command Design Pattern.
+Yêu cầu:
+Tạo các lớp Command cho mỗi hướng di chuyển.
+Tạo một lớp Invoker để nhận và thực thi các lệnh.
+Sử dụng phím mũi tên để điều khiển đối tượng.
+Mục tiêu: Nắm vững cấu trúc cơ bản của Command Design Pattern.
+
+2. Điều khiển ánh sáng:
+
+Mô tả: Tạo một script cho phép bật/tắt một nguồn sáng (Light) trong Scene bằng cách sử dụng Command Design Pattern.
+Yêu cầu:
+Tạo các lớp Command cho bật và tắt ánh sáng.
+Tạo một lớp Invoker để nhận và thực thi các lệnh.
+Sử dụng phím "L" để bật/tắt ánh sáng.
+Mục tiêu: Hiểu cách áp dụng Command Design Pattern cho các hành động đơn giản.
+Bài tập trung cấp:
+
+3. Hệ thống Undo/Redo:
+
+Mô tả: Mở rộng bài tập 1 để hỗ trợ chức năng Undo/Redo cho các lệnh di chuyển.
+Yêu cầu:
+Lưu trữ các lệnh đã thực thi trong một stack.
+Tạo các phương thức Undo() và Redo() để hủy bỏ và thực hiện lại các lệnh.
+Sử dụng phím "Z" để Undo và "Y" để Redo.
+Mục tiêu: Hiểu cách sử dụng Command Design Pattern để triển khai tính năng Undo/Redo.
+4. Hệ thống Macro:
+
+Mô tả: Tạo một hệ thống cho phép ghi lại và thực thi một chuỗi các lệnh (Macro).
+Yêu cầu:
+Tạo một lớp MacroCommand để lưu trữ danh sách các lệnh.
+Cho phép người dùng ghi lại các lệnh di chuyển bằng cách nhấn phím "R".
+Cho phép người dùng thực thi Macro bằng cách nhấn phím "M".
+Mục tiêu: Hiểu cách sử dụng Command Design Pattern để xử lý các chuỗi lệnh.
+Bài tập phức tạp:
+
+5. Hệ thống điều khiển nhân vật:
+
+Mô tả: Tạo một hệ thống điều khiển nhân vật phức tạp với nhiều hành động khác nhau (di chuyển, tấn công, nhảy, v.v.) bằng cách sử dụng Command Design Pattern.
+Yêu cầu:
+Tạo các lớp Command cho mỗi hành động của nhân vật.
+Tạo một lớp Invoker để nhận và thực thi các lệnh.
+Sử dụng các phím khác nhau để điều khiển nhân vật.
+Mục tiêu: Áp dụng Command Design Pattern cho một hệ thống phức tạp với nhiều hành động.
+6. Hệ thống AI đơn giản:
+
+Mô tả: Tạo một hệ thống AI đơn giản cho một đối tượng địch bằng cách sử dụng Command Design Pattern.
+Yêu cầu:
+Tạo các lớp Command cho các hành động của địch (di chuyển, tấn công, v.v.).
+Tạo một lớp Invoker để nhận và thực thi các lệnh.
+Sử dụng một logic đơn giản để quyết định hành động của địch.
+Mục tiêu: Hiểu cách sử dụng Command Design Pattern trong hệ thống AI.
+Lời khuyên:
