@@ -6,34 +6,25 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5306055e50565d085e5b597244265b44434e19287a2973332f711965e0b46161
+      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 0502515e530c0d5d5c0b542316200c44434f4b7a2d7a72637d7a4562b2b3656f
+      value: 0207005252000a58090a547b13705a44124f4872782a71642c701c64b0b8676c
       flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 575705075505080a0e5d0f7013210a44424f1b2c2e2c74312c2d4964bbb23060
+      value: 5203505f5750585a0c5e5c7347765c4412151d7b2f7074607d7c1f30e3b9676e
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 54530c540606080c5a565524497a0c44144e197c2d78243475284d66bab5313d
+      value: 01070c5e54030d595b0a0f7a15225b44454f4b2c7a7975632e7e4d64bbb1353d
       flags: 0
     RecentlyUsedSceneGuid-4:
-      value: 065755515c0c595f5f0b592743760b444e4f197e2d2b7733782f4e6bb2b03068
+      value: 5306055e50565d085e5b597244265b44434e19287a2973332f711965e0b46161
       flags: 0
     RecentlyUsedSceneGuid-5:
-      value: 0007525f54510a0c5a5b5e7240760c44434e1e7b7e2b73627c7b1b6bb1e56c60
+      value: 0502515e530c0d5d5c0b542316200c44434f4b7a2d7a72637d7a4562b2b3656f
       flags: 0
     RecentlyUsedSceneGuid-6:
-      value: 0609525506545b08090c5d2012760b4442154829787070367c7a1b66b3e66461
-      flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 555505055c0c080858595423457b0e44454e4c72792c25352c2b4c36e6b8676c
-      flags: 0
-    RecentlyUsedSceneGuid-8:
-      value: 5203520303540b0c555c587043270c44404e4a287a2b71622b2a4436e3e2323d
-      flags: 0
-    RecentlyUsedSceneGuid-9:
-      value: 020052525c03080a545e5d7b12700f44174f4f7c7a717767292b4537b6b36c3a
+      value: 53500d050653580b090f087543270b444e4f1e2b2e2c7f632e7f1937b1e2363b
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
@@ -52,4 +43,5 @@ EditorUserSettings:
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 1
+  m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
