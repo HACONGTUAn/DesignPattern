@@ -6,16 +6,16 @@ namespace OOP.Encapsulation.Basic
 {
     public class Player
     {
+    
         private float health = 100;
-        private float currentHealth = 0;
-
+      
 
         public void SetHealth(float except)
         {
-            if (currentHealth >= 0 && currentHealth <= 100)
+            if (health >= 0 && health <= 100)
             {
                 health += except;
-                currentHealth = health;
+               
             }
         }
         public float GetHealth()

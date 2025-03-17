@@ -1,0 +1,124 @@
+## Đề bài cơ bản
+
+### Đề bài 1: Lớp Player với thuộc tính đóng gói
+**Yêu cầu:**
+1. Tạo một lớp Player với thuộc tính Health được đóng gói
+2. Đảm bảo giá trị Health luôn nằm trong khoảng từ 0 đến 100
+3. Tạo MonoBehaviour PlayerController để sử dụng lớp Player
+4. Hiển thị giá trị Health lên UI (Text hoặc Slider)
+5. Tạo các nút tăng/giảm máu để kiểm tra tính hợp lệ của thuộc tính Health
+
+### Đề bài 2: Hệ thống vũ khí với đóng gói
+**Yêu cầu:**
+1. Tạo lớp Weapon với các thuộc tính Name, Damage và FireRate được đóng gói
+2. Đảm bảo Damage luôn dương và FireRate luôn lớn hơn 0
+3. Tạo MonoBehaviour WeaponManager để quản lý vũ khí người chơi
+4. Tạo 3 loại vũ khí khác nhau (Pistol, Rifle, Shotgun) với thông số riêng
+5. Hiển thị thông tin vũ khí đang sử dụng lên UI và cho phép người chơi chuyển đổi giữa các vũ khí
+
+## Đề bài trung bình
+
+### Đề bài 3: Hệ thống Inventory với đóng gói
+**Yêu cầu:**
+1. Tạo lớp Item với các thuộc tính ID, Name, Quantity, Weight được đóng gói phù hợp
+2. Tạo lớp Inventory để quản lý danh sách các Item với giới hạn trọng lượng tối đa
+3. Thiết kế UI hiển thị các Item trong Inventory
+4. Tạo các Item mẫu trong game scene: Potion (0.5kg), Sword (5kg), Shield (8kg), Gold (0.1kg/đơn vị)
+5. Cho phép người chơi nhặt các Item, nhưng không thể nhặt nếu vượt quá giới hạn trọng lượng
+6. Hiển thị trọng lượng hiện tại và giới hạn trọng lượng lên UI
+
+### Đề bài 4: Hệ thống Stat với đóng gói và sự kiện
+**Yêu cầu:**
+1. Tạo lớp CharacterStat sử dụng đóng gói và sự kiện thông báo khi giá trị thay đổi
+2. Tạo lớp Character với các thuộc tính: Health, Mana, Attack, Defense sử dụng CharacterStat
+3. Thiết kế UI hiển thị tất cả các stat của nhân vật
+4. Tạo các Equipment có thể ảnh hưởng đến stat: Armor (+10 Defense), Magic Amulet (+20 Mana), Sword (+5 Attack)
+5. Khi nhân vật trang bị/gỡ bỏ các Equipment, stat tương ứng sẽ được cập nhật
+6. UI sẽ được cập nhật tự động thông qua sự kiện khi các stat thay đổi
+
+## Đề bài nâng cao
+
+### Đề bài 5: Hệ thống Save/Load với đóng gói
+**Yêu cầu:**
+1. Thiết kế hệ thống SaveData để lưu trữ thông tin game: PlayerData, InventoryData, QuestData
+2. Tạo một trò chơi nhỏ với:
+   - Nhân vật có thể di chuyển, có level và máu
+   - Hệ thống Inventory với ít nhất 5 loại Item khác nhau
+   - Hệ thống Quest đơn giản với trạng thái "đang làm" và "đã hoàn thành"
+3. Tạo hệ thống SaveSystem cho phép lưu/tải game state
+4. Thiết kế UI cho phép người chơi lưu và tải từ 3 slot khác nhau
+5. Hiển thị thông tin cơ bản về mỗi save slot: thời gian lưu, cấp độ của nhân vật, số lượng quest đã hoàn thành
+6. Đảm bảo tất cả thông tin được đóng gói phù hợp và chỉ được truy cập thông qua các phương thức phù hợp
+
+## Đề bài cực khó
+
+### Đề bài 6: Hệ thống Modifier với đóng gói
+**Yêu cầu:**
+1. Hoàn thiện hệ thống StatModifier như trong mã đã cung cấp
+2. Tạo một RPG đơn giản với các nhân vật có các thuộc tính:
+   - Strength (ảnh hưởng đến sát thương)
+   - Agility (ảnh hưởng đến tốc độ và né tránh)
+   - Intelligence (ảnh hưởng đến phép thuật)
+   - Vitality (ảnh hưởng đến máu)
+3. Thiết kế hệ thống Equipment với 4 slot: Weapon, Armor, Helmet, Accessory
+   - Mỗi Equipment có thể có nhiều Modifier khác nhau
+   - Ví dụ: Sword of Strength (+5 Flat Strength, +10% PercentAdd Strength)
+   - Ví dụ: Armor of Vitality (+10 Flat Vitality, +15% PercentMultiply Vitality)
+4. Thiết kế hệ thống Buff/Debuff tạm thời:
+   - Strength Potion: +20% Strength trong 30 giây
+   - Poison: -5 Flat Health mỗi giây trong 10 giây
+   - Blessing: +10% tất cả thuộc tính trong 60 giây
+5. Hiển thị tất cả thuộc tính và các Modifier đang ảnh hưởng đến chúng lên UI
+6. Khi giá trị thuộc tính thay đổi (thêm/bớt modifier), UI sẽ tự động cập nhật
+7. Thêm hệ thống để hiển thị chi tiết các thành phần của mỗi thuộc tính (Base Value, các Modifier và giá trị cuối cùng)
+
+### Đề bài 7: Hệ thống kỹ năng với đóng gói và dependency injection
+**Yêu cầu:**
+1. Thiết kế hệ thống Skill với các thuộc tính được đóng gói:
+   - Name, Description, IconPath
+   - ManaCost, Cooldown
+   - Level, MaxLevel
+   - Damage/Effect dựa trên level
+2. Tạo interface ISkillEffect để tách biệt logic hiệu ứng khỏi thông tin kỹ năng
+3. Thiết kế ít nhất 5 hiệu ứng kỹ năng khác nhau:
+   - DirectDamage: Gây sát thương trực tiếp
+   - AreaDamage: Gây sát thương trong khu vực
+   - Heal: Hồi máu
+   - Buff: Tăng thuộc tính
+   - DoT: Gây sát thương theo thời gian
+4. Tạo hệ thống SkillManager với:
+   - Các kỹ năng được học
+   - Cooldown tracking
+   - Mana management
+5. Thiết kế UI hiển thị:
+   - Các kỹ năng với icon và cooldown
+   - Tooltip hiển thị thông tin chi tiết khi hover
+   - Thanh tiến trình nâng cấp kỹ năng
+6. Cho phép người chơi nâng cấp kỹ năng với skill points
+7. Tạo hệ thống lưu/tải trạng thái kỹ năng
+8. Sử dụng Dependency Injection để giảm sự phụ thuộc giữa các thành phần
+
+### Đề bài 8: Hệ thống kinh tế Game với đóng gói và Singleton Pattern
+**Yêu cầu:**
+1. Thiết kế hệ thống Currency với nhiều loại tiền tệ:
+   - Gold: Tiền tệ cơ bản
+   - Gem: Tiền tệ cao cấp
+   - Token: Tiền tệ đặc biệt để mở khóa nội dung
+2. Tạo CurrencyManager singleton với các phương thức:
+   - AddCurrency(CurrencyType, amount)
+   - SpendCurrency(CurrencyType, amount)
+   - GetBalance(CurrencyType)
+   - RegisterListener(CurrencyType, Action<int>)
+3. Đảm bảo tất cả giao dịch đều thông qua CurrencyManager
+4. Thiết kế hệ thống Shop với:
+   - Các mặt hàng có giá khác nhau
+   - Một số mặt hàng yêu cầu tiền tệ đặc biệt
+   - Các mặt hàng đặc biệt chỉ mở khóa khi đạt điều kiện
+5. Tạo hệ thống IAP (In-App Purchase) mô phỏng:
+   - Các gói Gem với giá khác nhau
+   - Các ưu đãi đặc biệt có thời hạn
+6. Hiển thị thông tin tiền tệ trên UI và cập nhật tự động khi thay đổi
+7. Thêm hệ thống lưu/tải số dư tiền tệ
+8. Đảm bảo tất cả dữ liệu tiền tệ được đóng gói đúng để tránh việc chỉnh sửa trực tiếp số dư
+
+Bạn có thể chọn bài tập phù hợp với trình độ để thực hành tính đóng gói trong lập trình OOP với Unity C#. Mỗi bài tập đều tập trung vào việc áp dụng tính đóng gói để bảo vệ dữ liệu và đảm bảo tính nhất quán của hệ thống.
