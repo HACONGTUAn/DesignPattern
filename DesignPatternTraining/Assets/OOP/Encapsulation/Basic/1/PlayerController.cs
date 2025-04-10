@@ -21,17 +21,17 @@ namespace OOP.Encapsulation.Basic
         }
         private void AddHealth()
         {
-            Player.SetHealth(10);
+            Player.Health += 10;
             ShowHealthPlayer();
         }
         private void ExceptHealth()
         {
-            Player.SetHealth(-10);
+            Player.Health -= 10;
             ShowHealthPlayer();
         }
         private void ShowHealthPlayer()
         {
-            TextHealth.text = "Heath Player:" +  Player.GetHealth().ToString();
+            TextHealth.text = "Heath Player:" +  Player.Health.ToString();
         }
 
     }

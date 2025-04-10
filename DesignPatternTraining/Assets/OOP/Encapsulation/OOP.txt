@@ -1,6 +1,6 @@
 ## Đề bài cơ bản
 
-### Đề bài 1: Lớp Player với thuộc tính đóng gói
+### Đề bài 1: Lớp Player với thuộc tính đóng gói (Done)
 **Yêu cầu:**
 1. Tạo một lớp Player với thuộc tính Health được đóng gói
 2. Đảm bảo giá trị Health luôn nằm trong khoảng từ 0 đến 100
@@ -8,7 +8,7 @@
 4. Hiển thị giá trị Health lên UI (Text hoặc Slider)
 5. Tạo các nút tăng/giảm máu để kiểm tra tính hợp lệ của thuộc tính Health
 
-### Đề bài 2: Hệ thống vũ khí với đóng gói
+### Đề bài 2: Hệ thống vũ khí với đóng gói      (Done)
 **Yêu cầu:**
 1. Tạo lớp Weapon với các thuộc tính Name, Damage và FireRate được đóng gói
 2. Đảm bảo Damage luôn dương và FireRate luôn lớn hơn 0
